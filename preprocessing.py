@@ -1,5 +1,14 @@
 class DataHandler():
     
+    """
+    Use example 
+    
+    data_frame = pd.read_csv('Team_Project_doc_data_19/train_test_2019.csv', delimiter=',', header =  0)
+    dh = DataHandler()
+    (X_train, Y_train, X_val, Y_val) = dh.preprocess(data_frame.drop(columns = 'education-num'), output_col = -1, standardize = True, train_val_split = 0.8)
+    
+    """
+    
     def __init__(self):
         self.le = None
         self.enc = None
